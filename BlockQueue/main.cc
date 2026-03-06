@@ -29,7 +29,7 @@ int main()
     pthread_t Pd, Con;
     pthread_create(&Pd, nullptr, PdFunc, (void *)&q);
     pthread_create(&Con, nullptr, ConFunc, (void *)&q);
-
+    
     pthread_join(Pd, nullptr);
     pthread_join(Con, nullptr);
     return 0;
